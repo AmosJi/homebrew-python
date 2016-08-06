@@ -6,7 +6,7 @@ class Python34 < Formula
   sha256 "997aca4dd8692f3c954658a3db11c1d0862bcbf8eadd6a164746eb33d317c034"
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--with-brewed-openssl"
     system "make"
     system "make install"
   end
